@@ -1,0 +1,52 @@
+
+.section {
+	@include make-col-ready();
+	@include make-col(12);
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @include media-breakpoint-up(sm) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    &--sticky-top {
+        padding-top: 0;
+    }
+
+    &--stuck-top {
+        padding-bottom: 2rem;
+
+        @include media-breakpoint-up(sm) {
+            padding-bottom: 4rem;
+        }
+    }
+
+    &--sticky-bottom {
+        padding-bottom: 0;
+    }
+
+    &--stuck-bottom {
+        padding-top: 2rem;
+
+        @include media-breakpoint-up(sm) {
+            padding-top: 4rem;
+        }
+    }
+
+	&--centered {
+		text-align: center;
+	}
+
+	&__title {
+		font-size: 4rem;
+	}
+
+	&__lead {
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		opacity: 0.6;
+		margin: 0;
+	}
+}

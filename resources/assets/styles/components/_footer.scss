@@ -1,0 +1,11 @@
+
+.footer {
+	@include make-col-ready();
+	@include make-col(12);
+
+	text-align: center;
+
+	&__copy {
+		margin: 0;
+	}
+}

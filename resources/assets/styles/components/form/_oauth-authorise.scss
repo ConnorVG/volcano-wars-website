@@ -1,0 +1,25 @@
+
+.form.form--oauth-authorise {
+    @include make-col-ready();
+    @include make-col(12);
+
+    @include media-breakpoint-up(sm) {
+        @include make-col(8);
+        @include make-col-offset(2);
+    }
+
+    @include media-breakpoint-up(md) {
+        @include make-col(6);
+        @include make-col-offset(3);
+    }
+
+    .scopes {
+        text-align: center;
+
+        &__list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+    }
+}

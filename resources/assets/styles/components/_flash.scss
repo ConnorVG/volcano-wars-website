@@ -1,0 +1,55 @@
+
+.flash {
+    @include make-col-ready();
+    @include make-col(12);
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @include media-breakpoint-up(sm) {
+        @include make-col(8);
+        @include make-col-offset(2);
+    }
+
+    @include media-breakpoint-up(md) {
+        @include make-col(6);
+        @include make-col-offset(3);
+    }
+
+    &--boxed {
+        padding-top: 2rem;
+
+        @include media-breakpoint-up(sm) {
+            padding-top: 4rem;
+        }
+    }
+
+    &__messages {
+        list-style: none;
+        padding: 0;
+    }
+
+    &__item {
+        padding: 0.5rem 2rem;
+        border: 1px solid transparent;
+
+        &--success {
+            color: $brand-success;
+            border-color: $brand-success;
+        }
+
+        &--danger {
+            color: $brand-danger;
+            border-color: $brand-danger;
+        }
+
+        &--warning {
+            color: $brand-warning;
+            border-color: $brand-warning;
+        }
+    }
+
+    &__message {
+        margin-bottom: 0;
+    }
+}
